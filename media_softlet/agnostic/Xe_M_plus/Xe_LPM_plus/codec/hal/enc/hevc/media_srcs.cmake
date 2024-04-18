@@ -19,4 +19,5 @@
 # OTHER DEALINGS IN THE SOFTWARE.
 
 media_include_subdirectory(pipeline)
+media_include_subdirectory(packet)
 media_include_subdirectory(features)

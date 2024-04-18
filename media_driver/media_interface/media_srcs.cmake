@@ -43,6 +43,10 @@ if(GEN9_KBL)
     media_include_subdirectory(media_interfaces_m9_kbl)
 endif()
 
+if(GEN10_CNL)
+    media_include_subdirectory(media_interfaces_m10_cnl)
+endif()
+
 if(GEN11_ICLLP)
     media_include_subdirectory(media_interfaces_m11_icllp)
 endif()
@@ -51,23 +55,23 @@ if(GEN11_JSL)
     media_include_subdirectory(media_interfaces_m11_jsl_ehl)
 endif()
 
-if(GEN12_TGLLP)
+if(ENABLE_REQUIRED_GEN_CODE OR GEN12_TGLLP)
     media_include_subdirectory(media_interfaces_m12_tgllp)
 endif()
 
-if(GEN12_DG1)
+if(ENABLE_REQUIRED_GEN_CODE OR GEN12_DG1)
     media_include_subdirectory(media_interfaces_m12_dg1)
 endif()
 
-if(GEN12_RKL)
+if(ENABLE_REQUIRED_GEN_CODE OR GEN12_RKL)
     media_include_subdirectory(media_interfaces_m12_rkl)
 endif()
 
-if(GEN12_ADLS)
+if(ENABLE_REQUIRED_GEN_CODE OR GEN12_ADLS)
     media_include_subdirectory(media_interfaces_m12_adls)
 endif()
 
-if(GEN12_ADLP)
+if(ENABLE_REQUIRED_GEN_CODE OR GEN12_ADLP)
     media_include_subdirectory(media_interfaces_m12_adlp)
 endif()
 
@@ -75,11 +79,11 @@ if(GEN12_ADLN)
     media_include_subdirectory(media_interfaces_m12_adln)
 endif()
 
-if(XEHP_SDV)
+if(XEHP_SDV OR XE_LPG)
     media_include_subdirectory(media_interfaces_xehp_sdv)
 endif()
 
-if(DG2)
+if(DG2 OR XE_LPG)
     media_include_subdirectory(media_interfaces_dg2)
 endif()
 

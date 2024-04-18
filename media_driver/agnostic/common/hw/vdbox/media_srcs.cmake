@@ -1,4 +1,4 @@
-# Copyright (c) 2017-2023, Intel Corporation
+# Copyright (c) 2017-2022, Intel Corporation
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -23,7 +23,6 @@ set(TMP_SOURCES_
     ${CMAKE_CURRENT_LIST_DIR}/mhw_vdbox_huc_interface.cpp
     ${CMAKE_CURRENT_LIST_DIR}/mhw_vdbox_mfx_interface.cpp
     ${CMAKE_CURRENT_LIST_DIR}/mhw_vdbox_vdenc_interface.cpp
-    ${CMAKE_CURRENT_LIST_DIR}/mhw_vdbox_avp_interface.cpp
 )
 
 set(TMP_HEADERS_
@@ -35,8 +34,6 @@ set(TMP_HEADERS_
     ${CMAKE_CURRENT_LIST_DIR}/mhw_vdbox_mfx_interface.h
     ${CMAKE_CURRENT_LIST_DIR}/mhw_vdbox_vdenc_generic.h
     ${CMAKE_CURRENT_LIST_DIR}/mhw_vdbox_vdenc_interface.h
-    ${CMAKE_CURRENT_LIST_DIR}/mhw_vdbox_avp_interface.h
-    ${CMAKE_CURRENT_LIST_DIR}/mhw_vdbox_avp_generic.h
 )
 
 set(COMMON_SOURCES_
@@ -55,3 +52,5 @@ set(COMMON_PRIVATE_INCLUDE_DIRS_
     ${COMMON_PRIVATE_INCLUDE_DIRS_}
     ${CMAKE_CURRENT_LIST_DIR}
 )
+
+media_add_curr_to_include_path()

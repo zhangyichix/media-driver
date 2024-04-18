@@ -24,11 +24,6 @@ if(NOT CMAKE_WDDM_LINUX)
 
 media_include_subdirectory(i915)
 
-if(ENABLE_XE_KMD)
-    media_include_subdirectory(xe)
-endif()
-
-
 if(ENABLE_PRODUCTION_KMD)
     media_include_subdirectory(i915_production)
 endif()
@@ -111,3 +106,5 @@ endif()
 source_group( "mos_softlet" FILES ${TMP_SOURCES_} ${TMP_HEADERS_} )
 
 endif() # CMAKE_WDDM_LINUX
+
+media_add_curr_to_include_path()

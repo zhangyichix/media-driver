@@ -23,6 +23,7 @@ set(TMP_HEADERS_
     ${CMAKE_CURRENT_LIST_DIR}/mos_defs_specific.h
     ${CMAKE_CURRENT_LIST_DIR}/mos_util_user_feature_keys_specific.h
     ${CMAKE_CURRENT_LIST_DIR}/mos_os_specific.h
+    ${CMAKE_CURRENT_LIST_DIR}/mos_os_private.h
 )
 
 if(${Media_Scalability_Supported} STREQUAL "yes")
@@ -44,3 +45,5 @@ set(SOFTLET_MOS_PUBLIC_INCLUDE_DIRS_
 )
 
 endif() # CMAKE_WDDM_LINUX
+
+media_add_curr_to_include_path()
